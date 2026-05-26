@@ -1,14 +1,12 @@
-{% assign publications = include.publications %}
-<div class="my-3 p-0 bg-white shadow-sm rounded-xl">
-    <h6 class="border-bottom border-gray p-3 mb-0">
-        {% if include.title %}{{ include.title }}{% else %}<i class="fas fa-star"></i> Selected Recent Publications{% endif %} 
-        <a href="{{ 'publications' | relative_url }}">(view all <i class="fas fa-angle-double-right"></i>)</a>
-    </h6>
-    {% for item in publications limit:include.limit %}
-        {% include widgets/publication_item.html item=item first=false last=false %}    
+<div class="profile-card">
+  <h4>{{ include.title }}</h4>
+  {% if include.publications.size > 0 %}
+    <ul>
+    {% for pub in include.publications %}
+      <li>{{ pub.title }}{% if pub.authors %} - {{ pub.authors }}{% endif %}{% if pub.venue %} ({{ pub.venue }}){% endif %}</li>
     {% endfor %}
-    <h6 class="d-block p-3 mt-0 text-right">
-        <a href="{{ 'publications' | relative_url }}">All publications <i class="fas fa-angle-double-right"></i></a>
-    </h6>
+    </ul>
+  {% else %}
+    <p class="text-muted">No publications yet. Add publications by creating files in _publications/</p>
+  {% endif %}
 </div>
-

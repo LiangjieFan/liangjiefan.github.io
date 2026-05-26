@@ -1,0 +1,15 @@
+name: Liangjie Fan
+email: your.email@example.com
+affiliation: Your University
+phone: 
+address: 
+profile_photo: 
+bio: "Welcome to my academic homepage!"
+
+social:
+  - name: GitHub
+    url: https://github.com/LiangjieFan
+    icon: fab fa-github
+  - name: Email
+    url: mailto:your.email@example.com
+    icon: fas fa-envelope
