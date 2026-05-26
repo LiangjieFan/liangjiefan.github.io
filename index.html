@@ -40,7 +40,21 @@ html { scroll-behavior: smooth; }
     font-weight: 700;
 }
 
-/* ===== PUBLICATION LAYOUT ===== */
+/* ================= ABOUT IMAGE PLACEHOLDER ================= */
+.profile-box{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:#e9ecef;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    font-size:60px;
+    color:#999;
+}
+
+/* ================= PUBLICATIONS ================= */
 
 .pub-item {
     margin-bottom: 24px;
@@ -58,17 +72,13 @@ html { scroll-behavior: smooth; }
     display: block;
 }
 
-.pub-title:hover {
-    text-decoration: underline;
-}
+.pub-title:hover { text-decoration: underline; }
 
-/* AUTHORS */
 .pub-authors {
     margin-top: 6px;
     color: #333;
 }
 
-/* TAGS */
 .pub-meta {
     margin-top: 8px;
     display: flex;
@@ -84,7 +94,7 @@ html { scroll-behavior: smooth; }
     border-radius: 20px;
 }
 
-/* HOVER ABSTRACT */
+/* hover abstract */
 .pub-tooltip {
     display: none;
     position: absolute;
@@ -92,7 +102,7 @@ html { scroll-behavior: smooth; }
     right: 12px;
     background: rgba(0,0,0,0.88);
     color: #fff;
-    padding: 10px 12px;
+    padding: 10px;
     font-size: 12px;
     border-radius: 8px;
     max-width: 260px;
@@ -102,7 +112,7 @@ html { scroll-behavior: smooth; }
     display: block;
 }
 
-/* TABS */
+/* tabs */
 .tab-btn {
     border: none;
     background: #eef4ff;
@@ -120,9 +130,6 @@ html { scroll-behavior: smooth; }
 
 .pub-tab-content { display: none; }
 .pub-tab-content.active { display: block; }
-
-/* OTHER */
-.skill-item { margin-bottom: 15px; }
 
 footer {
     background: white;
@@ -146,34 +153,31 @@ footer {
 <!-- ================= ABOUT ================= -->
 <div class="card-custom">
 <h2 class="section-title">About</h2>
-<p><strong>PhD Researcher in Computer Science</strong></p>
-<p>Department of Educational Studies, Xi'an Jiaotong-Liverpool University, Suzhou, P.R. China</p>
-<p>Email: Liangjie.Fan22@student.xjtlu.edu.cn</p>
-<p>Research focuses on AI in Education, CALL, HCI, and digital ageing.</p>
+
+<div class="row">
+    <div class="col-md-4 text-center">
+        <div class="profile-box"><i class="fas fa-user"></i></div>
+    </div>
+
+    <div class="col-md-8">
+        <p><strong>PhD Researcher in Computer Science</strong></p>
+        <p>Department of Educational Studies, Xi'an Jiaotong-Liverpool University, Suzhou, P.R. China</p>
+        <p>Email: Liangjie.Fan22@student.xjtlu.edu.cn</p>
+        <p>Research focuses on AI in Education, CALL, HCI, and digital ageing.</p>
+    </div>
+</div>
 </div>
 
 <!-- ================= EDUCATION ================= -->
 <div class="card-custom">
 <h2 class="section-title">Education</h2>
 
-<p><strong>University of Liverpool</strong> — PhD in Computer Science (2025–2028, Expected)</p>
-<p><strong>University of Liverpool</strong> — MA TESOL (Distinction) (2022–2024)</p>
-</div>
-
-<!-- ================= RESEARCH ================= -->
-<div class="card-custom">
-<h2 class="section-title">Research Areas</h2>
-<ul>
-<li>Artificial Intelligence in Education (AIED)</li>
-<li>Computer-Assisted Language Learning</li>
-<li>Human–Computer Interaction</li>
-<li>Educational Psychology</li>
-<li>Digital Ageing</li>
-</ul>
+<p><strong>University of Liverpool</strong> — PhD Computer Science (2025–2028)</p>
+<p><strong>University of Liverpool</strong> — MA TESOL (Distinction, 2022–2024)</p>
 </div>
 
 <!-- ================= PUBLICATIONS ================= -->
-<div class="card-custom" id="publications">
+<div class="card-custom">
 <h2 class="section-title">Selected Publications</h2>
 
 <div class="text-center">
@@ -184,14 +188,9 @@ footer {
 </div>
 
 <!-- ALL -->
-<div id="all" class="pub-tab-content active">
+<div id="all" class="pub-tab-content active"></div>
 
-<!-- copy everything -->
-<div id="all-content"></div>
-
-</div>
-
-<!-- EDUCATION -->
+<!-- EDU -->
 <div id="edu" class="pub-tab-content">
 
 <!-- 1 -->
@@ -199,12 +198,10 @@ footer {
 <a class="pub-title" href="https://doi.org/10.1016/j.ijer.2026.102991" target="_blank">
 When I grew up, I became you: The effects of AI self-continuum, feedback-seeking, and reflective interventions on preservice teachers’ buoyancy, resilience, and professional identity.
 </a>
-<div class="pub-tooltip">AI self-continuum & teacher identity development</div>
-
 <div class="pub-authors"><strong>Fan, L*</strong>, Kim, J., Yang, G., Detrick, R., Chan, W. S., & Li, N.</div>
-
 <div class="pub-meta">
-<span class="pub-tag">SSCI (Q1, IF=2.5)</span>
+<span class="pub-tag">SSCI</span>
+<span class="pub-tag">IF=2.5</span>
 </div>
 </div>
 
@@ -214,44 +211,79 @@ When I grew up, I became you: The effects of AI self-continuum, feedback-seeking
 Student-AI interaction patterns in collaborative problem solving using ordered network analysis.
 </a>
 <div class="pub-authors">Kim, J., Yang, G., Detrick, R., <strong>Fan, L</strong>, Chan, W. S., & Li, N.</div>
-<div class="pub-meta"><span class="pub-tag">SSCI (Q1, IF=5.3)</span></div>
+<div class="pub-meta"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=5.3</span></div>
+</div>
+
+<!-- 3 -->
+<div class="pub-item">
+<a class="pub-title" href="https://doi.org/10.1111/ejed.70576">
+Students’ Perception of Generative AI-Assisted Collaborative Argumentation.
+</a>
+<div class="pub-authors">Kim, J., Yu, S., Detrick, R., <strong>Fan, L</strong>, & Li, N.</div>
+<div class="pub-meta"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=3.7</span></div>
+</div>
+
+<!-- 4 -->
+<div class="pub-item">
+<a class="pub-title" href="https://doi.org/10.54475/jlt.2023.026">
+A systematic review of the application of metaverse in language education: Prominent themes, research methods, impacts, and future challenges.
+</a>
+<div class="pub-authors"><strong>Fan, L</strong>, & Chiang, J.</div>
 </div>
 
 </div>
 
-<!-- AGEING -->
+<!-- AGE -->
 <div id="age" class="pub-tab-content">
 
+<!-- 5 -->
 <div class="pub-item">
 <a class="pub-title" href="https://doi.org/10.1007/s12144-026-09479-7">
-Who gains more? Subjective socio-economic status in the impact of internet use on older adults’ depression.
+Who gains more? subjective socio-economic status in the impact of internet use on older adults’ depression.
 </a>
-
 <div class="pub-authors"><strong>Fan, L*</strong></div>
-<div class="pub-meta"><span class="pub-tag">SSCI (Q1, IF=2.9)</span></div>
+<div class="pub-meta"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=2.9</span></div>
 </div>
 
+<!-- 6 -->
 <div class="pub-item">
 <a class="pub-title" href="https://doi.org/10.1016/j.actpsy.2026.107042">
-Internet use, social adaptation and subjective well-being in Chinese older adults: A cross-lagged study.
+Internet use, social adaptation and subjective well-being in Chinese older adults: a cross-lagged study.
 </a>
-
 <div class="pub-authors"><strong>Fan, L*</strong></div>
-<div class="pub-meta"><span class="pub-tag">SSCI (Q1, IF=2.7)</span></div>
+<div class="pub-meta"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=2.7</span></div>
+</div>
+
+<!-- 7 -->
+<div class="pub-item">
+<a class="pub-title" href="https://doi.org/10.1177/21582440251379491">
+Profiling the Internet Usage of Older Adults in China with Empirical Evidence from a National Survey.
+</a>
+<div class="pub-authors"><strong>Fan, L*</strong></div>
+<div class="pub-meta"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=2.0</span></div>
+</div>
+
+<!-- 8 -->
+<div class="pub-item">
+<a class="pub-title" href="https://doi.org/10.1080/03601277.2024.2395471">
+Unveiling the English proficiency of Chinese older adults through a national survey.
+</a>
+<div class="pub-authors"><strong>Fan, L</strong>, & Chiang, J.</div>
+<div class="pub-meta"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=1.5</span></div>
 </div>
 
 </div>
 
-<!-- DIVERSITY -->
+<!-- DIV -->
 <div id="div" class="pub-tab-content">
 <div class="pub-item">Coming soon.</div>
 </div>
 
 </div>
 
-<!-- ================= REVIEWING ================= -->
+<!-- ================= REVIEW ================= -->
 <div class="card-custom">
-<h2 class="section-title">Journal Reviewing Experience</h2>
+<h2 class="section-title">Reviewing Experience</h2>
 <ul>
 <li>Educational and Information Technologies (SSCI)</li>
 <li>European Journal of Education (SSCI)</li>
@@ -265,16 +297,8 @@ Internet use, social adaptation and subjective well-being in Chinese older adult
 <!-- ================= SKILLS ================= -->
 <div class="card-custom">
 <h2 class="section-title">Other Skills</h2>
-
-<p><strong>Languages:</strong> English (IELTS 7.0), Chinese (Native), French (Beginner)</p>
-<p><strong>Tools:</strong> SPSS, R, Mplus, C#</p>
-</div>
-
-<!-- ================= CONTACT ================= -->
-<div class="card-custom">
-<h2 class="section-title">Contact</h2>
-<p>Email: Liangjie.Fan22@student.xjtlu.edu.cn</p>
-<p>Location: Suzhou, P.R. China</p>
+<p>Languages: English (IELTS 7.0), Chinese (Native), French (Beginner)</p>
+<p>Tools: SPSS, R, Mplus, C#</p>
 </div>
 
 </div>
@@ -285,28 +309,23 @@ Internet use, social adaptation and subjective well-being in Chinese older adult
 
 <script>
 function showTab(id){
-document.querySelectorAll('.pub-tab-content').forEach(e => e.classList.remove('active'));
-document.querySelectorAll('.tab-btn').forEach(e => e.classList.remove('active'));
-
+document.querySelectorAll('.pub-tab-content').forEach(e=>e.classList.remove('active'));
 document.getElementById(id).classList.add('active');
-event.target.classList.add('active');
 
-/* fill ALL tab */
-if(id === 'all'){
-document.getElementById("all-content").innerHTML =
+/* fill ALL */
+document.getElementById("all").innerHTML =
 document.getElementById("edu").innerHTML +
 document.getElementById("age").innerHTML +
 document.getElementById("div").innerHTML;
 }
-}
 
-/* initialize ALL */
-document.addEventListener("DOMContentLoaded", function(){
-document.getElementById("all-content").innerHTML =
+/* init */
+window.onload = function(){
+document.getElementById("all").innerHTML =
 document.getElementById("edu").innerHTML +
 document.getElementById("age").innerHTML +
 document.getElementById("div").innerHTML;
-});
+};
 </script>
 
 </body>
