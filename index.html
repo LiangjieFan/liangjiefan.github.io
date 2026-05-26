@@ -16,31 +16,14 @@ body {
     line-height: 1.7;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 .navbar {
     background: white;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
-.section {
-    padding: 70px 0;
-}
-
-.profile-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: linear-gradient(135deg,#eef4ff,#dce8ff);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 70px;
-    color: #007bff;
-    margin: auto;
-}
+.section { padding: 70px 0; }
 
 .card-custom {
     background: white;
@@ -57,36 +40,79 @@ html {
     font-weight: 700;
 }
 
+/* ================= PUBLICATION ================= */
+
 .pub-item {
     margin-bottom: 24px;
     padding: 22px;
     border-radius: 14px;
     background: white;
     border: 1px solid #e9ecef;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    position: relative;
+    transition: 0.2s ease;
 }
 
-.pub-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 12px;
+.pub-item:hover {
+    transform: translateY(-2px);
 }
 
-.pub-tags {
+/* TITLE */
+.pub-title {
+    color: #0d6efd;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.pub-title:hover {
+    text-decoration: underline;
+}
+
+/* AUTHORS */
+.pub-authors {
+    margin-top: 6px;
+    font-size: 15px;
+    color: #333;
+}
+
+/* TAGS */
+.pub-meta {
+    margin-top: 8px;
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
 }
 
 .pub-tag {
-    background: #007bff;
+    background: #0d6efd;
     color: white;
     font-size: 12px;
     padding: 4px 10px;
     border-radius: 20px;
     font-weight: 600;
 }
+
+/* ================= HOVER ABSTRACT ================= */
+
+.pub-tooltip {
+    display: none;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0,0,0,0.88);
+    color: #fff;
+    padding: 10px 12px;
+    font-size: 12px;
+    border-radius: 8px;
+    max-width: 280px;
+    z-index: 10;
+    line-height: 1.4;
+}
+
+.pub-item:hover .pub-tooltip {
+    display: block;
+}
+
+/* ================= TABS ================= */
 
 .tab-btn {
     border: none;
@@ -96,7 +122,6 @@ html {
     margin: 5px;
     border-radius: 25px;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 .tab-btn.active {
@@ -104,20 +129,14 @@ html {
     color: white;
 }
 
-.pub-tab-content {
-    display: none;
-}
-
-.pub-tab-content.active {
-    display: block;
-}
+.pub-tab-content { display: none; }
+.pub-tab-content.active { display: block; }
 
 footer {
     background: white;
     padding: 30px;
     text-align: center;
     margin-top: 50px;
-    border-top: 1px solid #eee;
 }
 </style>
 </head>
@@ -127,215 +146,107 @@ footer {
 <nav class="navbar navbar-expand-lg navbar-light sticky-top">
 <div class="container">
 <a class="navbar-brand"><strong>Liangjie Fan</strong></a>
-
-<ul class="navbar-nav ml-auto">
-<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-<li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-<li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
-<li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-<li class="nav-item"><a class="nav-link" href="#reviewing">Reviewing</a></li>
-<li class="nav-item"><a class="nav-link" href="#skills">Other Skills</a></li>
-<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-</ul>
 </div>
 </nav>
 
 <div class="container section">
 
-<!-- About -->
-<div class="card-custom" id="about">
-<div class="row align-items-center">
-<div class="col-md-4 text-center">
-<div class="profile-img">
-<i class="fas fa-user"></i>
-</div>
-</div>
-
-<div class="col-md-8">
-<p style="color:#007bff;font-weight:600;">PhD Researcher in Computer Science</p>
-
-<h2>Liangjie Fan (She/Her)</h2>
-
-<p>
-Department of Educational Studies, Xi'an Jiaotong-Liverpool University, Suzhou, P.R. China
-</p>
-
-<p>
-Email:
-<a href="mailto:Liangjie.Fan22@student.xjtlu.edu.cn">
-Liangjie.Fan22@student.xjtlu.edu.cn
-</a>
-</p>
-
-<p>
-My research focuses on Artificial Intelligence in Education (AIED), Computer-Assisted Language Learning, psychology in human-computer interaction, digital ageing, and technology-enhanced inclusive education.
-</p>
-</div>
-</div>
-</div>
-
-<!-- Education -->
-<div class="card-custom" id="education">
-<h2 class="section-title">Education</h2>
-
-<div class="pub-item">
-<h5>Doctor of Philosophy (PhD) in Computer Science</h5>
-<p><strong>University of Liverpool</strong><br>
-January 2025 – December 2028 (Expected)</p>
-</div>
-
-<div class="pub-item">
-<h5>Master of Teaching English to Speakers of Other Languages (Distinction)</h5>
-<p><strong>University of Liverpool</strong><br>
-September 2022 – April 2024</p>
-</div>
-</div>
-
-<!-- Research -->
-<div class="card-custom" id="research">
-<h2 class="section-title">Research Areas</h2>
-<ul>
-<li>Artificial Intelligence in Education (AIED)</li>
-<li>Computer-Assisted Language Learning</li>
-<li>Educational Psychology</li>
-<li>Human–Computer Interaction</li>
-<li>Digital Ageing and Gerontechnology</li>
-<li>Technology and Educational Equity</li>
-</ul>
-</div>
-
-<!-- Publications -->
+<!-- ================= PUBLICATIONS ================= -->
 <div class="card-custom" id="publications">
 <h2 class="section-title">Selected Publications</h2>
 
 <div class="text-center">
-<button class="tab-btn active" onclick="showPubTab(event,'educationpub')">Tech + Education</button>
-<button class="tab-btn" onclick="showPubTab(event,'ageing')">Tech + Ageing</button>
-<button class="tab-btn" onclick="showPubTab(event,'diversity')">Tech + Diversity</button>
+<button class="tab-btn active" onclick="showPubTab(event,'edu')">Tech + Education</button>
+<button class="tab-btn" onclick="showPubTab(event,'age')">Tech + Ageing</button>
+<button class="tab-btn" onclick="showPubTab(event,'div')">Tech + Diversity</button>
 </div>
 
-<!-- Education -->
-<div id="educationpub" class="pub-tab-content active">
-
-<div class="pub-item">
-<div class="pub-header">
-<div><strong>Fan, L.*</strong> (2026). When I grew up, I became you: The effects of AI self-continuum, feedback-seeking, and reflective interventions on preservice teachers’ buoyancy, resilience, and professional identity. <em>International Journal of Educational Research</em>, 138, 102991.</div>
-<div class="pub-tags"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=2.5</span></div>
-</div>
-</div>
+<!-- ========== EDUCATION ========== -->
+<div id="edu" class="pub-tab-content active">
 
 <div class="pub-item">
-<div class="pub-header">
-<div>Kim, J., Yang, G., Detrick, R., <strong>Fan, L.</strong>, Chan, W. S., & Li, N. (2026). Student-AI interaction patterns in collaborative problem solving using ordered network analysis. <em>Interactive Learning Environments</em>, 1–18.</div>
-<div class="pub-tags"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=5.3</span></div>
-</div>
+
+<a class="pub-title" href="https://doi.org/10.1016/j.ijer.2026.102991" target="_blank">
+When I grew up, I became you: The effects of AI self-continuum, feedback-seeking, and reflective interventions on preservice teachers’ buoyancy, resilience, and professional identity.
+</a>
+
+<div class="pub-tooltip">
+AI self-continuum, teacher identity formation, and reflective intervention effects in preservice teachers.
 </div>
 
-<div class="pub-item">
-<div class="pub-header">
-<div>Kim, J., Yu, S., Detrick, R., <strong>Fan, L.</strong>, & Li, N. (2026). Students’ perception of generative AI-assisted collaborative argumentation. <em>European Journal of Education</em>, 61(2).</div>
-<div class="pub-tags"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=3.7</span></div>
-</div>
+<div class="pub-authors">
+<strong>Fan, L.*</strong>, Kim, J., Yang, G., Detrick, R., Chan, W. S., & Li, N.
 </div>
 
-<div class="pub-item">
-<div class="pub-header">
-<div><strong>Fan, L.</strong>, & Chiang, J. (2023). A systematic review of the application of metaverse in language education: Prominent themes, research methods, impacts, and future challenges. <em>Journal of Language Teaching</em>, 3(10), 1–14.</div>
-<div class="pub-tags"><span class="pub-tag">Indexed</span></div>
-</div>
-</div>
-
-</div>
-
-<!-- Ageing -->
-<div id="ageing" class="pub-tab-content">
-
-<div class="pub-item">
-<div class="pub-header">
-<div><strong>Fan, L.*</strong> (2026). Who gains more? Subjective socio-economic status in the impact of internet use on older adults’ depression. <em>Current Psychology</em>, 45(9).</div>
-<div class="pub-tags"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=2.9</span></div>
+<div class="pub-meta">
+<span class="pub-tag">SSCI</span>
+<span class="pub-tag">IF=2.5</span>
 </div>
 </div>
 
 <div class="pub-item">
-<div class="pub-header">
-<div><strong>Fan, L.*</strong> (2026). Internet use, social adaptation and subjective well-being in Chinese older adults: A cross-lagged study. <em>Acta Psychologica</em>, 267, 107042.</div>
-<div class="pub-tags"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=2.7</span></div>
+
+<a class="pub-title" href="https://doi.org/10.1080/10494820.2026.2664072" target="_blank">
+Student-AI interaction patterns in collaborative problem solving using ordered network analysis.
+</a>
+
+<div class="pub-tooltip">
+Network-based analysis of student–AI collaboration behavior patterns.
+</div>
+
+<div class="pub-authors">
+Kim, J., Yang, G., Detrick, R., <strong>Fan, L.</strong>, Chan, W. S., & Li, N.
+</div>
+
+<div class="pub-meta">
+<span class="pub-tag">SSCI</span>
+<span class="pub-tag">IF=5.3</span>
 </div>
 </div>
+
+</div>
+
+<!-- ========== AGEING ========== -->
+<div id="age" class="pub-tab-content">
 
 <div class="pub-item">
-<div class="pub-header">
-<div><strong>Fan, L.*</strong> (2025). Profiling the internet usage of older adults in China with empirical evidence from a national survey. <em>SAGE Open</em>, 15(4).</div>
-<div class="pub-tags"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=2.0</span></div>
+
+<a class="pub-title" href="https://doi.org/10.1007/s12144-026-09479-7" target="_blank">
+Who gains more? Subjective socio-economic status in the impact of internet use on older adults’ depression.
+</a>
+
+<div class="pub-tooltip">
+Digital inequality, subjective SES, and mental health in ageing populations.
+</div>
+
+<div class="pub-authors">
+<strong>Fan, L.*</strong>
+</div>
+
+<div class="pub-meta">
+<span class="pub-tag">SSCI</span>
+<span class="pub-tag">IF=2.9</span>
 </div>
 </div>
 
+</div>
+
+<!-- ========== DIVERSITY ========== -->
+<div id="div" class="pub-tab-content">
 <div class="pub-item">
-<div class="pub-header">
-<div><strong>Fan, L.</strong>, & Chiang, J. (2025). Unveiling the English proficiency of Chinese older adults through a national survey. <em>Educational Gerontology</em>, 1–15.</div>
-<div class="pub-tags"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=1.5</span></div>
+More publications coming soon.
 </div>
 </div>
 
 </div>
 
-<div id="diversity" class="pub-tab-content">
-<div class="pub-item">More publications forthcoming.</div>
 </div>
-
-<p><em>* Corresponding author</em></p>
-
-</div>
-
-<!-- Reviewing -->
-<div class="card-custom" id="reviewing">
-<h2 class="section-title">Journal Reviewing Experience</h2>
-<ul>
-<li>Educational and Information Technologies (SSCI)</li>
-<li>European Journal of Education (SSCI)</li>
-<li>Current Psychology (SSCI)</li>
-<li>SAGE Open (SSCI)</li>
-<li>Journal of Computing in Higher Education (SSCI)</li>
-<li>Learning, Culture and Social Interaction (SSCI)</li>
-</ul>
-</div>
-
-<!-- Skills -->
-<div class="card-custom" id="skills">
-<h2 class="section-title">Other Skills</h2>
-
-<p><strong>Languages:</strong><br>
-English (IELTS: 7.0), Chinese (Native), French (Beginner)</p>
-
-<p><strong>IT & Statistical Tools:</strong><br>
-SPSS, R, Mplus, C#</p>
-</div>
-
-<!-- Contact -->
-<div class="card-custom" id="contact">
-<h2 class="section-title">Contact</h2>
-<p>Email: Liangjie.Fan22@student.xjtlu.edu.cn</p>
-<p>Location: Suzhou, P.R. China</p>
-</div>
-
-</div>
-
-<footer>
-© 2026 Liangjie Fan
-</footer>
 
 <script>
-function showPubTab(event, tabId) {
-document.querySelectorAll('.pub-tab-content').forEach(tab => {
-tab.classList.remove('active');
-});
-
-document.querySelectorAll('.tab-btn').forEach(btn => {
-btn.classList.remove('active');
-});
-
-document.getElementById(tabId).classList.add('active');
+function showPubTab(event, id) {
+document.querySelectorAll('.pub-tab-content').forEach(t => t.classList.remove('active'));
+document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+document.getElementById(id).classList.add('active');
 event.currentTarget.classList.add('active');
 }
 </script>
