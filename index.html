@@ -16,6 +16,10 @@ body {
     line-height: 1.7;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .navbar {
     background: white;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -40,9 +44,9 @@ body {
 
 .card-custom {
     background: white;
-    border-radius: 12px;
+    border-radius: 14px;
     padding: 35px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     margin-bottom: 30px;
 }
 
@@ -53,13 +57,13 @@ body {
 }
 
 .pub-item {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     padding: 22px;
     border-radius: 12px;
     background: white;
     border: 1px solid #e9ecef;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-    transition: transform 0.2s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: all 0.25s ease;
 }
 
 .pub-item:hover {
@@ -69,6 +73,7 @@ body {
 .pub-item a {
     color: #007bff;
     text-decoration: none;
+    font-weight: 600;
 }
 
 .pub-item a:hover {
@@ -89,7 +94,6 @@ footer {
     color: #666;
 }
 
-/* Publication tabs */
 .pub-tabs {
     margin-bottom: 25px;
 }
@@ -132,6 +136,7 @@ footer {
 <a class="navbar-brand" href="#"><strong>Liangjie Fan</strong></a>
 <ul class="navbar-nav ml-auto">
 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
 <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
 <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -141,52 +146,97 @@ footer {
 
 <div class="container section">
 
+<!-- About -->
+<div class="card-custom" id="about">
+<div class="row align-items-center">
+<div class="col-md-4 text-center">
+<div class="profile-img">
+<i class="fas fa-user"></i>
+</div>
+</div>
+<div class="col-md-8">
+<h2>Liangjie Fan</h2>
+<p>
+PhD Student in Computer Science
+</p>
+
+<div class="social-links">
+<a href="#"><i class="fab fa-google"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Education -->
+<div class="card-custom" id="education">
+<h2 class="section-title">Education</h2>
+<p><strong>PhD in Computer Science</strong><br>University Name</p>
+<p><strong>M.A.</strong><br>University of Liverpool</p>
+</div>
+
+<!-- Research -->
+<div class="card-custom" id="research">
+<h2 class="section-title">Research Interests</h2>
+<ul>
+<li>Tech+Education</li>
+<li>Tech+Ageing</li>
+<li>Tech+Diversity</li>
+</ul>
+</div>
+
+<!-- Publications -->
 <div class="card-custom" id="publications">
 <h2 class="section-title">Selected Publications</h2>
 
 <div class="pub-tabs text-center">
-    <button class="tab-btn active" onclick="showPubTab(event, 'all')">ALL</button>
-    <button class="tab-btn" onclick="showPubTab(event, 'education')">🎓 Tech + Education</button>
-    <button class="tab-btn" onclick="showPubTab(event, 'ageing')">🌿 Tech + Ageing</button>
-    <button class="tab-btn" onclick="showPubTab(event, 'diversity')">🌐 Tech + Diversity</button>
+<button class="tab-btn active" onclick="showPubTab(event,'all')">ALL</button>
+<button class="tab-btn" onclick="showPubTab(event,'education')">🎓 Tech + Education</button>
+<button class="tab-btn" onclick="showPubTab(event,'ageing')">🌿 Tech + Ageing</button>
+<button class="tab-btn" onclick="showPubTab(event,'diversity')">🌐 Tech + Diversity</button>
 </div>
 
-<!-- ALL -->
 <div id="all" class="pub-tab-content active">
-    <div class="pub-item">
-        <a href="#">Publication 1</a><br>
-        Example publication details.
-    </div>
-    <div class="pub-item">
-        <a href="#">Publication 2</a><br>
-        Example publication details.
-    </div>
+<div class="pub-item">
+<a href="#">Immersive Metaverse-Based Speaking Practice</a><br>
+Journal of Educational Technology, 2026
 </div>
 
-<!-- Education -->
+<div class="pub-item">
+<a href="#">Flow Experience and Oral Performance</a><br>
+Computers & Education, 2025
+</div>
+</div>
+
 <div id="education" class="pub-tab-content">
-    <div class="pub-item">
-        <a href="#">Education Publication</a><br>
-        Example education publication.
-    </div>
+<div class="pub-item">
+<a href="#">Metaverse Language Learning</a><br>
+Educational Technology Research
+</div>
 </div>
 
-<!-- Ageing -->
 <div id="ageing" class="pub-tab-content">
-    <div class="pub-item">
-        <a href="#">Ageing Publication</a><br>
-        Example ageing publication.
-    </div>
+<div class="pub-item">
+<a href="#">Technology and Healthy Ageing</a><br>
+Ageing & Society
+</div>
 </div>
 
-<!-- Diversity -->
 <div id="diversity" class="pub-tab-content">
-    <div class="pub-item">
-        Coming soon.
-    </div>
+<div class="pub-item">
+Coming soon.
+</div>
 </div>
 
 <p><em>* Corresponding author</em></p>
+</div>
+
+<!-- Contact -->
+<div class="card-custom" id="contact">
+<h2 class="section-title">Contact</h2>
+<p>Email: your.email@university.edu</p>
+<p>Location: United Kingdom</p>
 </div>
 
 </div>
