@@ -66,27 +66,6 @@ body {
     transform: translateY(-4px);
 }
 
-.pub-title {
-    font-size: 1.08rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.pub-meta {
-    color: #555;
-    margin-bottom: 8px;
-}
-
-.pub-badge {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 20px;
-    background: #eef4ff;
-    color: #0056b3;
-    font-size: 0.85rem;
-    margin-right: 8px;
-}
-
 .pub-item a {
     color: #007bff;
     text-decoration: none;
@@ -109,6 +88,40 @@ footer {
     margin-top: 50px;
     color: #666;
 }
+
+/* Publication tabs */
+.pub-tabs {
+    margin-bottom: 25px;
+}
+
+.tab-btn {
+    border: none;
+    background: #eef4ff;
+    color: #0056b3;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.tab-btn:hover {
+    background: #dbe8ff;
+}
+
+.tab-btn.active {
+    background: #007bff;
+    color: white;
+}
+
+.pub-tab-content {
+    display: none;
+}
+
+.pub-tab-content.active {
+    display: block;
+}
 </style>
 </head>
 
@@ -128,201 +141,52 @@ footer {
 
 <div class="container section">
 
-<div class="card-custom" id="about">
-<div class="row">
-<div class="col-md-3 text-center">
-<div class="profile-img">
-<i class="fas fa-user"></i>
-</div>
-</div>
-
-<div class="col-md-9">
-<h1>Liangjie Fan</h1>
-<h5>PhD Student in Computer Science</h5>
-
-<p>Department of Educational Studies, Xi’an Jiaotong-Liverpool University, Suzhou, China</p>
-<p>Department of Computer Science, University of Liverpool, Liverpool, United Kingdom</p>
-
-<p><i class="fas fa-envelope"></i> Liangjie.Fan22@student.xjtlu.edu.cn</p>
-
-<div class="social-links">
-<a href="mailto:Liangjie.Fan22@student.xjtlu.edu.cn"><i class="fas fa-envelope"></i></a>
-<a href="https://github.com/liangjiefan" target="_blank"><i class="fab fa-github"></i></a>
-</div>
-
-<br>
-
-<p>
-I am a PhD student at Xi’an Jiaotong-Liverpool University and the University of Liverpool. 
-My research lies at the intersection of Human–Computer Interaction (HCI), Artificial Intelligence in Education (AIED), and inclusive digital innovation.
-</p>
-
-</div>
-</div>
-</div>
-
-<div class="card-custom">
-<h2 class="section-title">Education</h2>
-
-<p><strong>Ph.D. in Computer Science</strong><br>
-University of Liverpool (2025–2029 expected)</p>
-
-<p><strong>M.A. TESOL (Distinction)</strong><br>
-University of Liverpool (2022-2024) </p>
-
-</div>
-    
-<div class="card-custom" id="research">
-<h2 class="section-title">Research Interests</h2>
-
-<p><strong>Tech + Education</strong><br>
-Generative AI in education, multimodal learning analytics, technology assisted learning, computer-assisted language learning.</p>
-
-<p><strong>Tech + Ageing</strong><br>
-Digital inclusion, educational gerontology, healthy ageing and internet use.</p>
-
-<p><strong>Tech + Diversity</strong><br>
-Inclusive AI design, equitable educational technology, accessible human-centered systems.</p>
-</div>
-
 <div class="card-custom" id="publications">
 <h2 class="section-title">Selected Publications</h2>
 
-<div class="pub-tabs text-center mb-4">
-    <button class="tab-btn active" onclick="showPubTab('all')">ALL</button>
-    <button class="tab-btn" onclick="showPubTab('education')">🎓 Tech + Education</button>
-    <button class="tab-btn" onclick="showPubTab('ageing')">🌿 Tech + Ageing</button>
-    <button class="tab-btn" onclick="showPubTab('diversity')">🌐 Tech + Diversity</button>
+<div class="pub-tabs text-center">
+    <button class="tab-btn active" onclick="showPubTab(event, 'all')">ALL</button>
+    <button class="tab-btn" onclick="showPubTab(event, 'education')">🎓 Tech + Education</button>
+    <button class="tab-btn" onclick="showPubTab(event, 'ageing')">🌿 Tech + Ageing</button>
+    <button class="tab-btn" onclick="showPubTab(event, 'diversity')">🌐 Tech + Diversity</button>
 </div>
 
 <!-- ALL -->
 <div id="all" class="pub-tab-content active">
-
-<div class="pub-item">
-<a href="https://doi.org/10.1016/j.ijer.2026.102991" target="_blank">
-When I grew up, I became you: The effects of AI self-continuum, feedback-seeking, and reflective interventions on preservice teachers’ buoyancy, resilience, and professional identity
-</a><br>
-<strong>Fan, L.*</strong> (2026). International Journal of Educational Research, 138, 102991. (SSCI, Q1, IF=2.5)
+    <div class="pub-item">
+        <a href="#">Publication 1</a><br>
+        Example publication details.
+    </div>
+    <div class="pub-item">
+        <a href="#">Publication 2</a><br>
+        Example publication details.
+    </div>
 </div>
 
-<div class="pub-item">
-<a href="https://doi.org/10.1080/10494820.2026.2664072" target="_blank">
-Student-AI interaction patterns in collaborative problem solving using ordered network analysis
-</a><br>
-Kim, J., Yang, G., Detrick, R., <strong>Fan, L.</strong>, Chan, W. S., & Li, N. (2026). Interactive Learning Environments, 1–18. (SSCI, Q1, IF=5.3)
-</div>
-
-<div class="pub-item">
-<a href="https://doi.org/10.1111/ejed.70576" target="_blank">
-Students’ Perception of Generative AI-Assisted Collaborative Argumentation
-</a><br>
-Kim, J., Yu, S., Detrick, R., <strong>Fan, L.</strong>, & Li, N. (2026). European Journal of Education, 61(2). (SSCI, Q1, IF=3.7)
-</div>
-
-<div class="pub-item">
-<a href="https://doi.org/10.54475/jlt.2023.026" target="_blank">
-A systematic review of the application of metaverse in language education: Prominent themes, research methods, impacts, and future challenges
-</a><br>
-<strong>Fan, L.</strong>, & Chiang, J. (2023). Journal of Language Teaching, 3(10), 1–14.
-</div>
-
-<div class="pub-item">
-<a href="https://doi.org/10.1007/s12144-026-09479-7" target="_blank">
-Who gains more? subjective socio-economic status in the impact of internet use on older adults’ depression
-</a><br>
-<strong>Fan, L.*</strong> (2026). Current Psychology, 45(9). (SSCI, Q1, IF=2.9)
-</div>
-
-<div class="pub-item">
-<a href="https://doi.org/10.1016/j.actpsy.2026.107042" target="_blank">
-Internet use, social adaptation and subjective well-being in Chinese older adults: a cross-lagged study
-</a><br>
-<strong>Fan, L.*</strong> (2026). Acta Psychologica, 267, 107042. (SSCI, Q1, IF=2.7)
-</div>
-
-<div class="pub-item">
-<a href="https://doi.org/10.1177/21582440251379491" target="_blank">
-Profiling the Internet Usage of Older Adults in China with Empirical Evidence from a National Survey
-</a><br>
-<strong>Fan, L.*</strong> (2025). Sage Open, 15(4). (SSCI, Q1, IF=2.0)
-</div>
-
-<div class="pub-item">
-<a href="https://doi.org/10.1080/03601277.2024.2395471" target="_blank">
-Unveiling the English proficiency of Chinese older adults through a national survey
-</a><br>
-<strong>Fan, L.</strong>, & Chiang, J. (2025). Educational Gerontology, 1–15. (SSCI, Q2, IF=1.5)
-</div>
-
-</div>
-
-<!-- Tech + Education -->
+<!-- Education -->
 <div id="education" class="pub-tab-content">
-
-<div class="pub-item">
-<a href="https://doi.org/10.1016/j.ijer.2026.102991" target="_blank">When I grew up, I became you</a><br>
-<strong>Fan, L.*</strong> (2026)
+    <div class="pub-item">
+        <a href="#">Education Publication</a><br>
+        Example education publication.
+    </div>
 </div>
 
-<div class="pub-item">
-<a href="https://doi.org/10.1080/10494820.2026.2664072" target="_blank">Student-AI interaction patterns in collaborative problem solving using ordered network analysis</a><br>
-Kim, J., Yang, G., Detrick, R., <strong>Fan, L.</strong>, Chan, W. S., & Li, N. (2026)
-</div>
-
-<div class="pub-item">
-<a href="https://doi.org/10.1111/ejed.70576" target="_blank">Students’ Perception of Generative AI-Assisted Collaborative Argumentation</a><br>
-Kim, J., Yu, S., Detrick, R., <strong>Fan, L.</strong>, & Li, N. (2026)
-</div>
-
-<div class="pub-item">
-<a href="https://doi.org/10.54475/jlt.2023.026" target="_blank">A systematic review of the application of metaverse in language education</a><br>
-<strong>Fan, L.</strong>, & Chiang, J. (2023)
-</div>
-
-</div>
-
-<!-- Tech + Ageing -->
+<!-- Ageing -->
 <div id="ageing" class="pub-tab-content">
-
-<div class="pub-item">
-<a href="https://doi.org/10.1007/s12144-026-09479-7" target="_blank">Who gains more?</a><br>
-<strong>Fan, L.*</strong> (2026)
+    <div class="pub-item">
+        <a href="#">Ageing Publication</a><br>
+        Example ageing publication.
+    </div>
 </div>
 
-<div class="pub-item">
-<a href="https://doi.org/10.1016/j.actpsy.2026.107042" target="_blank">Internet use, social adaptation and subjective well-being in Chinese older adults</a><br>
-<strong>Fan, L.*</strong> (2026)
-</div>
-
-<div class="pub-item">
-<a href="https://doi.org/10.1177/21582440251379491" target="_blank">Profiling the Internet Usage of Older Adults in China</a><br>
-<strong>Fan, L.*</strong> (2025)
-</div>
-
-<div class="pub-item">
-<a href="https://doi.org/10.1080/03601277.2024.2395471" target="_blank">Unveiling the English proficiency of Chinese older adults</a><br>
-<strong>Fan, L.</strong>, & Chiang, J. (2025)
-</div>
-
-</div>
-
-<!-- Tech + Diversity -->
+<!-- Diversity -->
 <div id="diversity" class="pub-tab-content">
-<div class="pub-item">
-Coming soon.
-</div>
+    <div class="pub-item">
+        Coming soon.
+    </div>
 </div>
 
 <p><em>* Corresponding author</em></p>
-</div>
-
-
-
-<div class="card-custom" id="contact">
-<h2 class="section-title">Contact</h2>
-
-<p>Email: Liangjie.Fan22@student.xjtlu.edu.cn</p>
-<p>Xi’an Jiaotong-Liverpool University, Suzhou, China</p>
 </div>
 
 </div>
@@ -330,6 +194,19 @@ Coming soon.
 <footer>
 © 2026 Liangjie Fan
 </footer>
+
+<script>
+function showPubTab(event, tabId) {
+    const tabs = document.querySelectorAll('.pub-tab-content');
+    const buttons = document.querySelectorAll('.tab-btn');
+
+    tabs.forEach(tab => tab.classList.remove('active'));
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    event.currentTarget.classList.add('active');
+}
+</script>
 
 </body>
 </html>
