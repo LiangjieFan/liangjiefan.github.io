@@ -40,7 +40,7 @@ html { scroll-behavior: smooth; }
     font-weight: 700;
 }
 
-/* ================= ABOUT IMAGE PLACEHOLDER ================= */
+/* avatar */
 .profile-box{
     width:180px;
     height:180px;
@@ -54,8 +54,7 @@ html { scroll-behavior: smooth; }
     color:#999;
 }
 
-/* ================= PUBLICATIONS ================= */
-
+/* publication */
 .pub-item {
     margin-bottom: 24px;
     padding: 22px;
@@ -142,7 +141,7 @@ footer {
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+<nav class="navbar navbar-light sticky-top">
 <div class="container">
 <a class="navbar-brand"><strong>Liangjie Fan</strong></a>
 </div>
@@ -163,7 +162,7 @@ footer {
         <p><strong>PhD Researcher in Computer Science</strong></p>
         <p>Department of Educational Studies, Xi'an Jiaotong-Liverpool University, Suzhou, P.R. China</p>
         <p>Email: Liangjie.Fan22@student.xjtlu.edu.cn</p>
-        <p>Research focuses on AI in Education, CALL, HCI, and digital ageing.</p>
+        <p>Research focuses on AI in Education, Computer assisted language learning (CALL), Psychology in human-computer and interaction, and digital ageing.</p>
     </div>
 </div>
 </div>
@@ -171,7 +170,6 @@ footer {
 <!-- ================= EDUCATION ================= -->
 <div class="card-custom">
 <h2 class="section-title">Education</h2>
-
 <p><strong>University of Liverpool</strong> — PhD Computer Science (2025–2028)</p>
 <p><strong>University of Liverpool</strong> — MA TESOL (Distinction, 2022–2024)</p>
 </div>
@@ -181,31 +179,22 @@ footer {
 <h2 class="section-title">Selected Publications</h2>
 
 <div class="text-center">
-<button class="tab-btn active" onclick="showTab('all')">ALL</button>
-<button class="tab-btn" onclick="showTab('edu')">Tech + Education</button>
+<button class="tab-btn active" onclick="showTab('edu')">Tech + Education</button>
 <button class="tab-btn" onclick="showTab('age')">Tech + Ageing</button>
 <button class="tab-btn" onclick="showTab('div')">Tech + Diversity</button>
 </div>
 
-<!-- ALL -->
-<div id="all" class="pub-tab-content active"></div>
-
 <!-- EDU -->
-<div id="edu" class="pub-tab-content">
+<div id="Tech+Edu" class="pub-tab-content active">
 
-<!-- 1 -->
 <div class="pub-item">
-<a class="pub-title" href="https://doi.org/10.1016/j.ijer.2026.102991" target="_blank">
+<a class="pub-title" href="https://doi.org/10.1016/j.ijer.2026.102991">
 When I grew up, I became you: The effects of AI self-continuum, feedback-seeking, and reflective interventions on preservice teachers’ buoyancy, resilience, and professional identity.
 </a>
-<div class="pub-authors"><strong>Fan, L*</strong>, Kim, J., Yang, G., Detrick, R., Chan, W. S., & Li, N.</div>
-<div class="pub-meta">
-<span class="pub-tag">SSCI</span>
-<span class="pub-tag">IF=2.5</span>
-</div>
+<div class="pub-authors"><strong>Fan, L*</strong> </div>
+<div class="pub-meta"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=2.5</span></div>
 </div>
 
-<!-- 2 -->
 <div class="pub-item">
 <a class="pub-title" href="https://doi.org/10.1080/10494820.2026.2664072">
 Student-AI interaction patterns in collaborative problem solving using ordered network analysis.
@@ -214,7 +203,6 @@ Student-AI interaction patterns in collaborative problem solving using ordered n
 <div class="pub-meta"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=5.3</span></div>
 </div>
 
-<!-- 3 -->
 <div class="pub-item">
 <a class="pub-title" href="https://doi.org/10.1111/ejed.70576">
 Students’ Perception of Generative AI-Assisted Collaborative Argumentation.
@@ -223,10 +211,9 @@ Students’ Perception of Generative AI-Assisted Collaborative Argumentation.
 <div class="pub-meta"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=3.7</span></div>
 </div>
 
-<!-- 4 -->
 <div class="pub-item">
 <a class="pub-title" href="https://doi.org/10.54475/jlt.2023.026">
-A systematic review of the application of metaverse in language education: Prominent themes, research methods, impacts, and future challenges.
+A systematic review of the application of metaverse in language education.
 </a>
 <div class="pub-authors"><strong>Fan, L</strong>, & Chiang, J.</div>
 </div>
@@ -234,39 +221,35 @@ A systematic review of the application of metaverse in language education: Promi
 </div>
 
 <!-- AGE -->
-<div id="age" class="pub-tab-content">
+<div id="Tech+Ageing" class="pub-tab-content">
 
-<!-- 5 -->
 <div class="pub-item">
 <a class="pub-title" href="https://doi.org/10.1007/s12144-026-09479-7">
-Who gains more? subjective socio-economic status in the impact of internet use on older adults’ depression.
+Who gains more? Subjective socio-economic status in the impact of internet use on older adults’ depression.
 </a>
 <div class="pub-authors"><strong>Fan, L*</strong></div>
 <div class="pub-meta"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=2.9</span></div>
 </div>
 
-<!-- 6 -->
 <div class="pub-item">
 <a class="pub-title" href="https://doi.org/10.1016/j.actpsy.2026.107042">
-Internet use, social adaptation and subjective well-being in Chinese older adults: a cross-lagged study.
+Internet use, social adaptation and subjective well-being in Chinese older adults.
 </a>
 <div class="pub-authors"><strong>Fan, L*</strong></div>
 <div class="pub-meta"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=2.7</span></div>
 </div>
 
-<!-- 7 -->
 <div class="pub-item">
 <a class="pub-title" href="https://doi.org/10.1177/21582440251379491">
-Profiling the Internet Usage of Older Adults in China with Empirical Evidence from a National Survey.
+Profiling the Internet Usage of Older Adults in China.
 </a>
 <div class="pub-authors"><strong>Fan, L*</strong></div>
 <div class="pub-meta"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=2.0</span></div>
 </div>
 
-<!-- 8 -->
 <div class="pub-item">
 <a class="pub-title" href="https://doi.org/10.1080/03601277.2024.2395471">
-Unveiling the English proficiency of Chinese older adults through a national survey.
+Unveiling the English proficiency of Chinese older adults.
 </a>
 <div class="pub-authors"><strong>Fan, L</strong>, & Chiang, J.</div>
 <div class="pub-meta"><span class="pub-tag">SSCI</span><span class="pub-tag">IF=1.5</span></div>
@@ -275,7 +258,7 @@ Unveiling the English proficiency of Chinese older adults through a national sur
 </div>
 
 <!-- DIV -->
-<div id="div" class="pub-tab-content">
+<div id="Tech+Diversity" class="pub-tab-content">
 <div class="pub-item">Coming soon.</div>
 </div>
 
@@ -311,21 +294,9 @@ Unveiling the English proficiency of Chinese older adults through a national sur
 function showTab(id){
 document.querySelectorAll('.pub-tab-content').forEach(e=>e.classList.remove('active'));
 document.getElementById(id).classList.add('active');
-
-/* fill ALL */
-document.getElementById("all").innerHTML =
-document.getElementById("edu").innerHTML +
-document.getElementById("age").innerHTML +
-document.getElementById("div").innerHTML;
+document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+event.target.classList.add('active');
 }
-
-/* init */
-window.onload = function(){
-document.getElementById("all").innerHTML =
-document.getElementById("edu").innerHTML +
-document.getElementById("age").innerHTML +
-document.getElementById("div").innerHTML;
-};
 </script>
 
 </body>
