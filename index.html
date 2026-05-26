@@ -1,229 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liangjie Fan - Academic Homepage</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-        }
-        .navbar {
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .profile-card {
-            background: white;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        .profile-header {
-            display: flex;
-            gap: 30px;
-            align-items: flex-start;
-            margin-bottom: 30px;
-        }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background-color: #e9ecef;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            color: #999;
-            flex-shrink: 0;
-        }
-        .profile-info h1 {
-            margin-bottom: 5px;
-            color: #333;
-        }
-        .profile-info p {
-            margin: 5px 0;
-            color: #666;
-            font-size: 0.95em;
-        }
-        .affiliation {
-            font-size: 0.9em;
-            color: #555;
-            line-height: 1.6;
-            margin: 8px 0;
-        }
-        .affiliation-item {
-            margin: 5px 0;
-        }
-        .affiliation-dept {
-            font-weight: 500;
-            color: #007bff;
-        }
-        .section-title {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            color: #333;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-        }
-        .publication-item {
-            margin-bottom: 15px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-left: 4px solid #007bff;
-        }
-        .social-links {
-            margin-top: 20px;
-        }
-        .social-links a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            background-color: #007bff;
-            color: white;
-            border-radius: 50%;
-            margin-right: 10px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        .social-links a:hover {
-            background-color: #0056b3;
-            text-decoration: none;
-        }
-        .research-interests {
-            line-height: 1.8;
-            color: #555;
-        }
-        .research-topic {
-            margin: 8px 0;
-        }
-        .research-topic strong {
-            color: #007bff;
-        }
-        footer {
-            background-color: #f8f9fa;
-            padding: 30px 0;
-            margin-top: 50px;
-            border-top: 1px solid #e9ecef;
-            text-align: center;
-            color: #666;
-        }
-        .container {
-            max-width: 1000px;
-            padding: 40px 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liangjie Fan | Academic Homepage</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+}
+
+.navbar {
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.section {
+    padding: 70px 0;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    color: #777;
+}
+
+.card-custom {
+    background: white;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.section-title {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.pub-item {
+    margin-bottom: 18px;
+    padding-left: 15px;
+    border-left: 4px solid #007bff;
+}
+
+.social-links a {
+    margin-right: 12px;
+    font-size: 1.4rem;
+    color: #007bff;
+}
+
+footer {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    margin-top: 50px;
+}
+</style>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="/"><strong>Liangjie Fan</strong></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <div class="container">
-        <div class="profile-card" id="home">
-            <div class="profile-header">
-                <div class="profile-img">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="profile-info">
-                    <h1>Liangjie Fan</h1>
-                    <div class="affiliation">
-                        <div class="affiliation-item">
-                            <span class="affiliation-dept">Department of Educational Studies</span><br>
-                            Academy of Future Education, Xi'an Jiaotong-Liverpool University
-                        </div>
-                        <div class="affiliation-item">
-                            <span class="affiliation-dept">Department of Computer Science</span><br>
-                            University of Liverpool
-                        </div>
-                    </div>
-                    <p style="margin-top: 15px;"><strong>Email:</strong></p>
-                    <p style="margin: 5px 0;"><a href="mailto:Liangjie.Fan22@student.xjtlu.edu.cn">Liangjie.Fan22@student.xjtlu.edu.cn</a></p>
-                    <p style="margin: 5px 0;"><a href="mailto:1592321480@qq.com">1592321480@qq.com</a></p>
-                    <div class="social-links">
-                        <a href="https://github.com/LiangjieFan" target="_blank" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:Liangjie.Fan22@student.xjtlu.edu.cn" title="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+<div class="container">
+<a class="navbar-brand" href="#"><strong>Liangjie Fan</strong></a>
+<ul class="navbar-nav ml-auto">
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+<li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
 
-            <h3>About Me</h3>
-            <p>I am a graduate researcher pursuing dual degrees at Xi'an Jiaotong-Liverpool University and the University of Liverpool, with a strong background in educational technology and human-centered design. My work focuses on leveraging digital technologies to address real-world challenges and create inclusive, accessible solutions for diverse user groups.</p>
-        </div>
+<div class="container section">
 
-        <div class="profile-card" id="research">
-            <h2 class="section-title"><i class="fas fa-microscope"></i> Research Interests</h2>
-            <div class="research-interests">
-                <p>My research interests are centered on <strong>Human-Computer Interaction (HCI)</strong>, with particular emphasis on:</p>
-                <div class="research-topic">
-                    <strong>• Technology + Education (Tech+Edu)</strong><br>
-                    <span style="margin-left: 20px; color: #777; font-size: 0.95em;">Designing and evaluating technology-enhanced learning experiences that support diverse pedagogical contexts and learner needs.</span>
-                </div>
-                <div class="research-topic">
-                    <strong>• Technology + Ageing (Tech+Ageing)</strong><br>
-                    <span style="margin-left: 20px; color: #777; font-size: 0.95em;">Exploring accessible and user-friendly digital solutions that promote healthy ageing and intergenerational digital engagement.</span>
-                </div>
-                <div class="research-topic">
-                    <strong>• Technology + Diversity (Tech+Diversity)</strong><br>
-                    <span style="margin-left: 20px; color: #777; font-size: 0.95em;">Advancing inclusive design practices that ensure equitable access and meaningful participation across different demographic groups and abilities.</span>
-                </div>
-            </div>
-        </div>
+<div class="card-custom" id="about">
+<div class="row">
+<div class="col-md-3 text-center">
+<div class="profile-img">
+<i class="fas fa-user"></i>
+</div>
+</div>
 
-        <div class="profile-card" id="publications">
-            <h2 class="section-title"><i class="fas fa-book"></i> Publications</h2>
-            <div class="publication-item">
-                <p><strong>[Publication Title]</strong></p>
-                <p class="text-muted">Authors: [Author Names]</p>
-                <p class="text-muted">Conference/Journal: [Venue and Year]</p>
-                <p style="margin-top: 10px;"><small>Add your publications here by editing the index.html file.</small></p>
-            </div>
-        </div>
+<div class="col-md-9">
+<h1>Liangjie Fan (She/Her)</h1>
+<h5>PhD Student in Computer Science</h5>
 
-        <div class="profile-card" id="contact">
-            <h2 class="section-title"><i class="fas fa-envelope"></i> Contact</h2>
-            <p><strong>Primary Email:</strong> <a href="mailto:Liangjie.Fan22@student.xjtlu.edu.cn">Liangjie.Fan22@student.xjtlu.edu.cn</a></p>
-            <p><strong>Alternative Email:</strong> <a href="mailto:1592321480@qq.com">1592321480@qq.com</a></p>
-            <p><strong>Current Affiliations:</strong></p>
-            <ul>
-                <li>Department of Educational Studies, Academy of Future Education, Xi'an Jiaotong-Liverpool University</li>
-                <li>Department of Computer Science, University of Liverpool</li>
-            </ul>
-            <p><strong>GitHub:</strong> <a href="https://github.com/LiangjieFan" target="_blank">@LiangjieFan</a></p>
-        </div>
-    </div>
+<p>
+Department of Educational Studies, Xi’an Jiaotong-Liverpool University, Suzhou, China
+</p>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Liangjie Fan. All rights reserved.</p>
-        </div>
-    </footer>
+<p>
+University of Liverpool, Liverpool, United Kingdom
+</p>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<p>
+<i class="fas fa-envelope"></i>
+Liangjie.Fan22@student.xjtlu.edu.cn
+</p>
+
+<div class="social-links">
+<a href="mailto:Liangjie.Fan22@student.xjtlu.edu.cn"><i class="fas fa-envelope"></i></a>
+<a href="https://github.com/liangjiefan" target="_blank"><i class="fab fa-github"></i></a>
+</div>
+
+<br>
+
+<p>
+I am a PhD student in Computer Science at the University of Liverpool, affiliated with Xi’an Jiaotong-Liverpool University. My research lies at the intersection of Human-Computer Interaction (HCI), Artificial Intelligence in Education (AIED), and inclusive digital innovation.
+</p>
+
+<p>
+My work focuses on understanding how human-centered intelligent systems can enhance learning, support professional development, and promote digital inclusion across diverse populations.
+</p>
+</div>
+</div>
+</div>
+
+<div class="card-custom">
+<h2 class="section-title">Education</h2>
+
+<p><strong>Ph.D. in Computer Science</strong><br>
+University of Liverpool (2025–2028 expected)</p>
+
+<p><strong>M.A. TESOL (Distinction)</strong><br>
+Xi’an Jiaotong-Liverpool University</p>
+
+<p><strong>B.A. English Teaching</strong><br>
+Jiangsu University of Technology</p>
+</div>
+
+<div class="card-custom" id="research">
+<h2 class="section-title">Research Interests</h2>
+
+<p><strong>Technology + Education</strong><br>
+Generative AI in education, multimodal learning analytics, human-AI interaction, AI-assisted language learning, collaborative argumentation.</p>
+
+<p><strong>Technology + Ageing</strong><br>
+Digital inclusion, internet use and wellbeing among older adults, educational gerontology, technology-supported healthy ageing.</p>
+
+<p><strong>Technology + Diversity</strong><br>
+Inclusive AI design, equitable educational technology, learner diversity, accessible human-centered systems.</p>
+</div>
+
+<div class="card-custom" id="publications">
+<h2 class="section-title">Selected Publications</h2>
+
+<div class="pub-item">
+<strong>To Correct or Be Corrected?</strong><br>
+Multimodal Analysis of AI Interaction Modes on EFL Learners’ Engagement (Under Review)
+</div>
+
+<div class="pub-item">
+<strong>Developmental Trajectories and Determinants of English-Speaking Flow</strong><br>
+System (Major Revision)
+</div>
+
+<div class="pub-item">
+<strong>Who Gains More?</strong><br>
+Current Psychology, 2026
+</div>
+
+<div class="pub-item">
+<strong>Internet Use, Social Adaptation and Subjective Well-being in Chinese Older Adults</strong><br>
+Acta Psychologica, 2026
+</div>
+
+<div class="pub-item">
+<strong>Student-AI Interaction Patterns in Collaborative Problem Solving</strong><br>
+Interactive Learning Environments, 2026
+</div>
+
+<div class="pub-item">
+<strong>Developing Students' Higher-Order Thinking Skills with Generative AI</strong><br>
+IGI Global, 2025
+</div>
+</div>
+
+<div class="card-custom" id="contact">
+<h2 class="section-title">Contact</h2>
+
+<p>Email: Liangjie.Fan22@student.xjtlu.edu.cn</p>
+
+<p>
+Department of Educational Studies<br>
+Xi’an Jiaotong-Liverpool University<br>
+Suzhou, China
+</p>
+</div>
+
+</div>
+
+<footer>
+© 2026 Liangjie Fan
+</footer>
+
 </body>
 </html>
