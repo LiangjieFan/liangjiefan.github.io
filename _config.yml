@@ -1,7 +1,1 @@
-# Site settings
-title: Liangjie Fan
-email: your.email@example.com
-description: Academic Homepage
-
-# Build settings - Disable Jekyll
-# GitHub Pages will serve static files directly
+# Minimal Jekyll config - static only
